@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Vision Plus</title>
+    <meta name="description" content="Contactez Vision Plus pour vos projets de photographie : portrait, mode, mariage et éditorial à Paris." />
+    <link rel="icon" href="img/favicon.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="img/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body class="page-contact">
+    <div class="page-transition" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#contact">Aller au contenu</a>
+
+    <header class="site-header" id="site-header">
+      <a class="logo" href="index.html">
+        <img src="img/logo.jpg" alt="" width="793" height="793" />
+        <span>Vision Plus</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html" class="is-active">Contact</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <main>
+      <!-- PAGE HERO -->
+      <section class="page-hero" id="contact">
+        <div class="page-hero__inner">
+          <p class="eyebrow reveal-up" style="--delay:.1s">Contact</p>
+          <h1 class="reveal-up" style="--delay:.25s">Parlons de<br />votre projet.</h1>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact-section">
+        <div class="contact-section__inner">
+          <div class="contact-info reveal-left">
+            <p class="eyebrow">Atelier</p>
+            <address>
+              <p>12 rue de Penthièvre<br />75008 Paris</p>
+              <p>
+                <a href="mailto:atelier@visionplus.studio">atelier@visionplus.studio</a>
+              </p>
+              <p>+33 1 42 65 18 40</p>
+            </address>
+            <div class="contact-hours">
+              <p class="eyebrow">Horaires</p>
+              <p>Lun – Ven : 9h – 18h</p>
+              <p>Sam : 10h – 16h (sur rendez-vous)</p>
+            </div>
+          </div>
+
+          <form class="contact-form reveal-right" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Sophie Dupont" />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="sophie@example.com" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject">
+                <option value="">Choisir un projet…</option>
+                <option value="portrait">Portrait</option>
+                <option value="mode">Mode / Éditorial</option>
+                <option value="mariage">Mariage</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet, votre calendrier, votre budget…"></textarea>
+            </div>
+            <button class="btn btn--gold" type="submit">Envoyer le message</button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer__brand">
+        <img class="footer__logo" src="img/logo.jpg" alt="Vision Plus" width="793" height="793" />
+        <p>Immortalisez chaque instant</p>
+      </div>
+      <div class="footer__meta">
+        <p>12 rue de Penthièvre<br />75008 Paris</p>
+        <p>
+          <a href="mailto:atelier@visionplus.studio">atelier@visionplus.studio</a><br />
+          +33 1 42 65 18 40
+        </p>
+      </div>
+      <nav class="footer__nav">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer__copy">© 2026 Vision Plus — Tous droits réservés</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

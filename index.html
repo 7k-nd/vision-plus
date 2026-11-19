@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vision Plus — Maison de photographie</title>
+    <meta name="description" content="Vision Plus, maison de photographie. Immortalisez chaque instant. Portraits, mode, mariage et image d'auteur." />
+    <link rel="icon" href="img/favicon.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="img/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body class="page-home">
+    <div class="page-transition" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#accueil">Aller au contenu</a>
+
+    <header class="site-header" id="site-header">
+      <a class="logo" href="index.html">
+        <img src="img/logo.jpg" alt="" width="793" height="793" />
+        <span>Vision Plus</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html" class="is-active">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="accueil" aria-label="Accueil">
+        <div class="hero__bands" id="hero-bands" aria-hidden="true"></div>
+        <div class="hero__veil"></div>
+        <div class="hero__content">
+          <p class="eyebrow reveal-up" style="--delay:.1s">Maison de photographie</p>
+          <h1 class="hero__title">
+            <span class="char-reveal" aria-hidden="true">Vision Plus</span>
+            <span class="sr-only">Vision Plus</span>
+          </h1>
+          <p class="hero__tagline reveal-up" style="--delay:.6s">Immortalisez chaque instant</p>
+          <a class="btn reveal-up" href="portfolio.html" style="--delay:.85s">Voir le portfolio</a>
+        </div>
+      </section>
+
+      <!-- STATEMENT MARQUEE -->
+      <div class="statement-wrap reveal-fade">
+        <p class="statement">Immortalisez chaque instant</p>
+      </div>
+
+      <!-- SERVICES PREVIEW -->
+      <section class="services" id="services">
+        <div class="services__inner">
+          <p class="eyebrow reveal-up" style="--delay:.05s">Nos univers</p>
+          <h2 class="reveal-up" style="--delay:.15s">Ce que nous capturons</h2>
+          <div class="services__grid">
+            <article class="service-card reveal-up" style="--delay:.1s">
+              <div class="service-card__img">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Mode" width="400" height="560" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <h3>Mode</h3>
+                <p>Éditoriaux, lookbooks et campagnes — l'élégance comme langage.</p>
+                <a class="service-card__link" href="portfolio.html?filter=mode">Explorer →</a>
+              </div>
+            </article>
+            <article class="service-card reveal-up" style="--delay:.2s">
+              <div class="service-card__img">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Portrait" width="400" height="560" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <h3>Portrait</h3>
+                <p>Révéler l'essence d'un visage, d'un regard, d'un instant suspendu.</p>
+                <a class="service-card__link" href="portfolio.html?filter=portrait">Explorer →</a>
+              </div>
+            </article>
+            <article class="service-card reveal-up" style="--delay:.3s">
+              <div class="service-card__img">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Mariage" width="400" height="560" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <h3>Mariage</h3>
+                <p>Des souvenirs authentiques pour les jours qui comptent le plus.</p>
+                <a class="service-card__link" href="portfolio.html?filter=mariage">Explorer →</a>
+              </div>
+            </article>
+            <article class="service-card reveal-up" style="--delay:.4s">
+              <div class="service-card__img">
+                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Éditorial" width="400" height="560" loading="lazy" />
+              </div>
+              <div class="service-card__body">
+                <h3>Éditorial</h3>
+                <p>Narrations visuelles pour la presse, les livres et les expositions.</p>
+                <a class="service-card__link" href="portfolio.html?filter=editorial">Explorer →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA BAND -->
+      <section class="cta-band reveal-fade">
+        <div class="cta-band__inner">
+          <p class="eyebrow">Prêt à créer ?</p>
+          <h2>Travaillons ensemble.</h2>
+          <a class="btn btn--light" href="contact.html">Prendre contact</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer__brand">
+        <img class="footer__logo" src="img/logo.jpg" alt="Vision Plus" width="793" height="793" />
+        <p>Immortalisez chaque instant</p>
+      </div>
+      <div class="footer__meta">
+        <p>12 rue de Penthièvre<br />75008 Paris</p>
+        <p>
+          <a href="mailto:atelier@visionplus.studio">atelier@visionplus.studio</a><br />
+          +33 1 42 65 18 40
+        </p>
+      </div>
+      <nav class="footer__nav">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer__copy">© 2026 Vision Plus — Tous droits réservés</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+/* =========================================================
+   animations.css  — Vision Plus
+   Scroll-reveal, page transitions, hero letter-by-letter,
+   stagger reveals, counter up
+   ========================================================= */
+
+/* Page transition overlay */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--gold);
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+.page-transition.is-entering {
+  animation: pt-enter 0.55s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.page-transition.is-leaving {
+  animation: pt-leave 0.45s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes pt-enter {
+  from { transform: translateY(100%); }
+  50%  { transform: translateY(0); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes pt-leave {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+
+/* ---- Scroll Reveal base ---- */
+
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-fade {
+  opacity: 0;
+  transition:
+    opacity 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--delay, 0s),
+    transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--delay, 0s);
+}
+
+.reveal-up    { transform: translateY(42px); }
+.reveal-left  { transform: translateX(-52px); }
+.reveal-right { transform: translateX(52px); }
+.reveal-fade  { transform: scale(0.97); }
+
+.reveal-up.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-fade.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Hero character reveal ---- */
+
+.char-reveal {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.char-reveal .char {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  animation: char-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes char-in {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ---- Service cards hover lift ---- */
+.service-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 56px rgba(42, 36, 24, 0.14);
+}
+
+/* ---- Team cards hover ---- */
+.team-card {
+  transition: transform 0.4s ease;
+}
+.team-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ---- Gallery items stagger reveal ---- */
+.gallery .work {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.gallery .work.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Fact counter pulse ---- */
+.facts dt {
+  transition: color 0.3s ease;
+}
+.facts dt.counted {
+  animation: count-pulse 0.4s ease;
+}
+@keyframes count-pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); color: var(--gold-soft); }
+  100% { transform: scale(1); }
+}
+
+/* ---- CTA band parallax bg ---- */
+.cta-band {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---- Lightbox fade ---- */
+.lightbox:not([hidden]) {
+  animation: lb-in 0.3s ease forwards;
+}
+@keyframes lb-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ---- Form field focus line ---- */
+.form-field input,
+.form-field textarea,
+.form-field select {
+  position: relative;
+}
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  animation: field-focus 0.3s ease forwards;
+}
+@keyframes field-focus {
+  from { box-shadow: 0 1px 0 0 var(--line); }
+  to   { box-shadow: 0 2px 0 0 var(--gold); }
+}
+
+/* ---- Mobile menu slide ---- */
+.mobile-menu:not([hidden]) {
+  animation: menu-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-fade,
+  .char-reveal .char,
+  .page-transition,
+  .service-card,
+  .team-card,
+  .gallery .work {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
