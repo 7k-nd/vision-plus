@@ -796,6 +796,41 @@ body.lightbox-open {
   gap: 20px;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Mobile — horizontal snap scroll */
+@media (max-width: 640px) {
+  .services__grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+    padding-bottom: 16px;
+    /* hide scrollbar */
+    scrollbar-width: none;
+  }
+  .services__grid::-webkit-scrollbar {
+    display: none;
+  }
+  .services__grid .service-card {
+    flex: 0 0 72vw;
+    max-width: 300px;
+    scroll-snap-align: start;
+  }
+  /* First card slight indent so it aligns with text */
+  .services__grid .service-card:first-child {
+    scroll-snap-align: start;
+  }
+}
+
 .service-card {
   display: flex;
   flex-direction: column;
